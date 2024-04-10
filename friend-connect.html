@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connect with a Friend - CanvasSwap</title>
+   <link rel="stylesheet" href="login-styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Connect with a Friend</h1>
+        <!-- Friend ID form -->
+        <form id="friend-connect-form">
+            <label for="friend-id">Friend's ID (#123456):</label>
+            <input type="text" id="friend-id" name="friend-id" placeholder="#123456" pattern="#[0-9]{6}" required>
+            <button type="submit">Connect</button>
+        </form>
+        <!-- Back button to return to mode selection -->
+        <button id="back-btn" class="mode-btn" onclick="window.history.back();">Back to Mode Selection</button>
+    </div>
+</body>
+</html>

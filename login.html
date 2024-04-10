@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to CanvasSwap</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>CanvasSwap</h1>
+        <form id="login-form">
+            <div class="form-control">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-control">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="button" onclick="submitLogin()">Login</button>
+        </form>
+    </div>
+
+    <script>
+        function submitLogin() {
+            var username = document.getElementById('username').value;
+            // For demonstration, redirecting with username in query parameters
+            window.location.href = 'mode-selection.html?username=' + encodeURIComponent(username);
+        }
+    </script>
+<link rel="stylesheet" href="login-styles.css">
+
+</body>
+</html>
+

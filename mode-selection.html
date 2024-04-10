@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Mode - CanvasSwap</title>
+   <link rel="stylesheet" href="login-styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>CanvasSwap</h1>
+        <!-- Displaying the username passed via URL parameters -->
+        <div id="userGreeting">Welcome!</div>
+        <!-- Buttons for each mode with event listeners for clicks -->
+        <button id="mode1-btn" class="mode-btn">Mode 1</button>
+        <button id="mode2-btn" class="mode-btn">Mode 2</button>
+    </div>
+
+    <script>
+        function navigateToPage(mode) {
+            if (mode === 'mode1') {
+                window.location.href = 'friend-connect.html';
+            } else if (mode === 'mode2') {
+                window.location.href = 'drawing-session.html'; // Assume this page is for drawing with a random person
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const username = params.get('username');
+            if (username) {
+                document.getElementById('userGreeting').textContent = `Welcome, ${decodeURIComponent(username)}`;
+            }
+
+            document.getElementById('mode1-btn').addEventListener('click', () => navigateToPage('mode1'));
+            document.getElementById('mode2-btn').addEventListener('click', () => navigateToPage('mode2'));
+        });
+    </script>
+</body>
+</html>

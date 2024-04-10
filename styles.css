@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+}
+
+canvas {
+    border: 1px solid #ccc;
+    cursor: crosshair;
+    background-color: white;
+    display: block;
+    margin: 20px auto;
+}
+
+#controls {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+button img {
+    height: 40px;
+    width: auto;
+}
+
+.larger-btn img.start-img {
+    height: 60px; /* Specifically enlarging the Start button image */
+}
+
+input[type="range"],
+input[type="color"] {
+    cursor: pointer;
+}
+
+#timer {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
